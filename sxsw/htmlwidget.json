@@ -1,6 +1,4 @@
-{
-    "hotspots": [
-    {
+{"hotspots": [{
         "object": {
             "url": "http://gabesimagination.com/layar/gabes-imagination/sxsw/sxsw-design.html",//url pointing to your carousel.html
             "contentType": "text/html",
@@ -24,8 +22,7 @@
             "referenceImage": "turtle"
         },
         "id": "test_1"
-    }    
-    ],
+    }],
     "layer": "gabesimagination",
     "errorString": "Ok",
     "errorCode": 0
