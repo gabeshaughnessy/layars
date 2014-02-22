@@ -5,8 +5,8 @@
             "url": "http://gabesimagination.com/layar/gabes-imagination/sxsw/sxsw-design.html",//url pointing to your carousel.html
             "contentType": "text/html",
             "viewport": {
-                "height": 233,//define the height of viewport  
-                "width": 600,//define the width of the viewport . width and height define how much of our page will be shown
+                "height": "233",//define the height of viewport  
+                "width": "600",//define the width of the viewport . width and height define how much of our page will be shown
                 "interactive": true,//users can swipe the carousel
                 "scrollable": false//users cannot scroll  
             },
