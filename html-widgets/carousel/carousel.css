@@ -1,0 +1,141 @@
+/*Copyright (c) 2012, Layar B.V.
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+    *Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+    *Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+    *Neither the name of the <organization> nor the
+     names of its contributors may be used to endorse or promote products
+     derived from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL LAYAR B.V BE LIABLE FOR ANY DIRECT,
+ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    -webkit-user-select: none; /* Don't allow selecting images */
+       -moz-user-select: none;
+            user-select: none;
+}
+
+a#detach {
+    display: block;
+}
+
+html.detached {
+    background: #000;
+}
+    html.detached #wrap {
+        margin: 0 auto;
+    }
+
+div#log {
+    position: absolute;
+    z-index: 1;
+    color: #000;
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff;
+    font: 16px sans-serif;
+}
+
+a#reload {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 7%;
+    height: 7%;
+    z-index: 1;
+}
+
+/* CAROUSEL
+--------------------------------------------------------------- */
+#wrap {
+    position: relative;
+}
+    #carousel li {
+        display: table-cell;
+        list-style: none;
+        text-align: center;
+    }
+        #carousel li img {
+            vertical-align: middle;
+            margin: 0;
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+/* SWIPE DEMO STROKE
+--------------------------------------------------------------- */
+#wrap > #swipedemo {
+    margin: 10px;
+    width: 40px;
+    height: 31px;
+    position: absolute;
+    background: #fff;
+    border: 2px solid #000;
+    right: -999em; /* Positioned using JS */
+    bottom: -999em;
+    -webkit-border-radius: 1px 4px 4px 2px;
+       -moz-border-radius: 1px 4px 4px 2px;
+            border-radius: 1px 4px 4px 2px;
+    -webkit-box-shadow: 1px 1px #000;
+       -moz-box-shadow: 1px 1px #000;
+            box-shadow: 1px 1px #000;
+}
+#swipedemo:empty:after { /* :empty = exclude IE8 */
+    content: '';
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: -14px;
+    top: 4px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    background: #fff;
+    border: 2px solid black;
+    border-width: 2px 0 0 2px;
+}
+
+/* ANIMATIONS
+--------------------------------------------------------------- */
+#carousel ul.animate {
+    -webkit-animation: peel 2s infinite;
+       -moz-animation: peel 2s infinite;
+            animation: peel 2s infinite;
+}
+
+#swipedemo.animate {
+    -webkit-animation: swipe 2s infinite;
+       -moz-animation: swipe 2s infinite;
+            animation: swipe 2s infinite;
+}
+
+@-webkit-keyframes swipe { 0% {-webkit-transform:translate3d(0,0,0);width:40px} 50% {-webkit-transform:translate3d(0,0,0);width:40px} 85% {-webkit-transform:translate3d(-80px,0,0);width:150px} 100% {-webkit-transform:translate3d(0,0,0);width:40px} }
+   @-moz-keyframes swipe { 0% {-moz-transform:translate3d(0,0,0);width:40px} 50% {-moz-transform:translate3d(0,0,0);width:40px} 85% {-moz-transform:translate3d(-80px,0,0);width:150px} 100% {-moz-transform:translate3d(0,0,0);width:40px} }
+        @keyframes swipe { 0% {transform:translate3d(0,0,0);width:40px} 50% {transform:translate3d(0,0,0);width:40px} 85% {transform:translate3d(-80px,0,0);width:150px} 100% {transform:translate3d(0,0,0);width:40px} }
+
+@-webkit-keyframes peel { 0% {-webkit-transform:translate3d(0,0,0)} 50% {-webkit-transform:translate3d(0,0,0)} 85% {-webkit-transform:translate3d(-80px,0,0)} 100% {-webkit-transform:translate3d(0,0,0)} }
+   @-moz-keyframes peel { 0% {-moz-transform:translate3d(0,0,0)} 50% {-moz-transform:translate3d(0,0,0)} 85% {-moz-transform:translate3d(-80px,0,0)} 100% {-moz-transform:translate3d(0,0,0)} }
+        @keyframes peel { 0% {transform:translate3d(0,0,0)} 50% {transform:translate3d(0,0,0)} 85% {transform:translate3d(-80px,0,0)} 100% {transform:translate3d(0,0,0)} }

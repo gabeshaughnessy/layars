@@ -1,0 +1,68 @@
+{
+    "hotspots": [
+    {
+        "object": {
+            "url": "http://gabesimagination.com/layar/gabes-imagination/sxsw/sxsw-design.html",//url pointing to your carousel.html
+            "contentType": "text/html",
+            "viewport": {
+                "height": 2330,//define the height of viewport  
+                "width": 600,//define the width of the viewport . width and height define how much of our page will be shown
+                "interactive": true,//users can swipe the carousel
+                "scrollable": false//users cannot scroll  
+            },
+            "size": 0.3604497354497354//the size of the widget. This is calculated relative to the reference image/Page
+        },
+        "transform": {
+            "translate": {
+                "y": -0.3,
+                "x": 0.19,
+                "z": 0.0001
+            },
+            "scale": 1
+        },
+        "anchor": {
+            "referenceImage": "layered_magazine_bag"
+        },
+        "id": 1
+    }/*,
+        
+    {
+        "object": {
+            "url": "http://www.example.com/twitter.html",//url pointing to your twitter widget
+            "contentType": "text/html",
+            "viewport": {
+                "height": 300,//same as the one set in our html file
+                "width": 300,//same as the one set in our html file
+                "interactive": false,//users cannot interact with the widget
+                "scrollable": true // this parameter is also considered false now
+            },
+            "size": 0.5
+        },
+        "transform": {
+            "translate": {
+                "y": 0.26,
+                "x": -0.15,
+                "z": 0.0001
+            },
+            "scale": 1
+        },
+        //Since interactive is set to false we can add an action to the object
+        "actions": [{
+            "uri": "http://www.layar.com",
+            "contentType": "text/html"
+        }],
+            
+        "anchor": {
+            "referenceImage": "layered_magazine_bag"
+        },
+        "id": 2
+    }
+        
+        
+    ],
+    "layer": "htmlwidgets",
+    "errorString": "Ok",
+    "errorCode": 0,
+    "morePages": false,
+    "refreshInterval": 900
+}*/
