@@ -225,6 +225,16 @@ else {
 	header( 'Content-type: application/json; charset=utf-8' );
 	
 	// Print out Json response.
-	echo $jsonresponse;
+//	echo $jsonresponse;
+  echo "object": {
+                "url": "http://gabesimagination.com/layar/gabes-imagination/sxsw/sxsw-design.html",
+                "contentType": "text/html",
+                "viewport": {
+                    "height": 233,
+                    "width": 600,
+                    "interactive": true,//users can swipe the carousel
+                    "scrollable": false
+                },   
+                "size": 0.3604497354497354 }
 
 ?>
