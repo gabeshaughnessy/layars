@@ -226,7 +226,7 @@ else {
 	
 	// Print out Json response.
 //	echo $jsonresponse;
-  echo "object": {
+  echo '"object": {
                 "url": "http://gabesimagination.com/layar/gabes-imagination/sxsw/sxsw-design.html",
                 "contentType": "text/html",
                 "viewport": {
@@ -235,6 +235,6 @@ else {
                     "interactive": true,//users can swipe the carousel
                     "scrollable": false
                 },   
-                "size": 0.3604497354497354 }
+                "size": 0.3604497354497354 }';
 
 ?>
