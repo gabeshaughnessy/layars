@@ -26,9 +26,7 @@
         "id": 1
     }    
     ],
-    "layer": "gabeimagination",
+    "layer": "gabesimagination",
     "errorString": "Ok",
-    "errorCode": 0,
-    "morePages": false,
-    "refreshInterval": 900
+    "errorCode": 0
 }
