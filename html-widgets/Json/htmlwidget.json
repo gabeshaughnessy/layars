@@ -10,7 +10,7 @@
                 "interactive": true,//users can swipe the carousel
                 "scrollable": false//users cannot scroll  
             },
-            "size": .5//the size of the widget. This is calculated relative to the reference image/Page
+            "size": 0.3//the size of the widget. This is calculated relative to the reference image/Page
         },
         "transform": {
             "translate": {
